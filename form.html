@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição</title>
+    <link rel="stylesheet" href="styleForm.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo GDG">
+        <nav>
+            <a href="index.html">Página inicial</a>
+            <a href="#">Sobre o evento</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Formulário de Inscrição</h2>
+        <div class="form-container">
+            <form id="inscricaoForm">
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+                <input type="email" id="email" placeholder="Digite seu email" required>
+                <button type="submit">Enviar Inscrição</button>
+            </form>
+            <p id="resultado"></p>
+            <p id="timer" class="hidden">Redirecionando em <span id="contador">20</span> segundos...</p>
+        </div>
+        <p class="footer">&copy; 2025 Todos os direitos reservados</p>
+    </div>
+
+    <script src="scriptForm.js"></script>
+</body>
+</html>
