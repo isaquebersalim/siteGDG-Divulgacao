@@ -17,6 +17,11 @@ header {
 header img {
     height: 80px;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+  
 nav a {
     margin: 0 15px;
     text-decoration: none;
