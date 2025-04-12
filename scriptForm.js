@@ -28,3 +28,8 @@ document.getElementById("inscricaoForm").addEventListener("submit", function(e) 
         }
     }, 1000);
 });
+
+const telefone = document.getElementById('telefone');
+telefone.addEventListener('input', function(){
+    this.value = this.value.replace(/\D/g, '');//Remove qualquer coisa que não seja número
+});
