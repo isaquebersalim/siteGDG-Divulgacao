@@ -2,8 +2,9 @@ document.getElementById("inscricaoForm").addEventListener("submit", function(e) 
     e.preventDefault();
     const nome = document.getElementById("nome").value.trim();
     const email = document.getElementById("email").value.trim();
-
-    if (nome === "" || email === "") {
+    const telefone = document.getElementById("telefone").value.trim();
+    
+    if (nome === "" || email === "" || telefone === "") {
         alert("Preencha todos os campos.");
         return;
     }
