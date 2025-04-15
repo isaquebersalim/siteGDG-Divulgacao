@@ -29,10 +29,30 @@ header img {
     height: 70px;
 }
 
+.nav-tema {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#toggle-theme {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+#toggle-theme:hover {
+    transform: scale(1.2);
+}
+
+
 nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: #ffb300;
+    color: var(--link-color);
     font-weight: bold;
 }
 
@@ -40,7 +60,7 @@ nav a {
 .countdown {
     font-size: 5em;
     margin: 20px 0;
-    color: #333;
+    color: var(--countdown-color);
 }
 
 /* Botão de inscrição */
@@ -49,8 +69,8 @@ nav a {
 }
 
 .form-container button {
-    background-color: #0288d1;
-    color: white;
+    background-color: var(--button-bg);
+    color: var(--button-text);
     padding: 12px 24px;
     border: none;
     border-radius: 6px;
@@ -68,8 +88,8 @@ nav a {
 }
 
 .facaParteDoGdg button{
-    background-color: #0288d1;
-    color: white;
+    background-color: var(--button-bg);
+    color: var(--button-text);
     padding: 12px 24px;
     border: none;
     border-radius: 6px;
@@ -100,7 +120,7 @@ nav a {
     margin: 0 auto 20px auto;
     line-height: 1.6;
     font-size: 1.1em;
-    color: #000;
+    color: var(--text-color);
 }
 
 /* Mapa */
@@ -117,9 +137,16 @@ iframe {
 footer {
     margin-top: 60px;
     padding: 20px;
-    background-color: #f1f1f1;
-    color: #333;
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
+
+footer h2,
+footer .footer {
+    color: var(--text-color);
+}
+
 
 .linksContatos{
     display: flex;
@@ -157,4 +184,64 @@ footer {
 .linksContatos a.whatsapp:hover{
     transform: scale(1.2);
     color: rgb(12, 193, 67);
+}
+
+:root {
+    --bg-color: #f9fbfc;
+    --text-color: #000000;
+    --header-bg: #ffffff;
+    --section-bg: #b3e5fc;
+    --footer-bg: #f1f1f1;
+    --button-bg: #0288d1;
+    --button-text: #ffffff;
+    --link-color: #ffb300;
+    --countdown-color: #333333;
+}
+
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --header-bg: #1f1f1f;
+    --section-bg: #2c2c2c;
+    --footer-bg: #1f1f1f;
+    --button-bg: #0288d1;
+    --button-text: #ffffff;
+    --link-color: #ffb300;
+    --countdown-color: #00e676;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+header {
+    background-color: var(--header-bg);
+}
+
+#sobre {
+    background-color: var(--section-bg);
+}
+
+
+footer {
+    background-color: var(--footer-bg);
+}
+
+#toggle-theme {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+#toggle-theme:hover {
+    transform: scale(1.2);
 }

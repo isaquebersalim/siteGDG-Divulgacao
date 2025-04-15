@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +11,16 @@
 <body>
     <header>
         <img src="img/gdgimage.jpg" alt="Logo GDG">
-        <nav>
-            <a href="#sobre">Sobre o evento</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <div class="nav-tema">
+            <nav>
+                <a href="#sobre">Sobre o evento</a>
+                <a href="#contato">Contato</a>
+            </nav>
+    
+            <button id="toggle-theme" aria-label="Alternar tema" title="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
     <div class="container">
         <h2>Sábado 24 de maio, às 9h</h2>

@@ -21,3 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     startCountdown();
 });
+
+const toggleBtn = document.getElementById("toggle-theme");
+const html = document.documentElement;
+
+toggleBtn.addEventListener("click", () => {
+    const currentTheme = html.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", newTheme);
+
+    // Ícone muda entre lua ☾ e sol ☀
+    toggleBtn.innerHTML = newTheme === "dark"
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+});
