@@ -33,3 +33,18 @@ const telefone = document.getElementById('telefone');
 telefone.addEventListener('input', function(){
     this.value = this.value.replace(/\D/g, '');//Remove qualquer coisa que não seja número
 });
+function alternarTema() {
+    const html = document.documentElement;
+    const botao = document.getElementById("botao-tema");
+    const temaAtual = html.getAttribute("data-theme");
+    const novoTema = temaAtual === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", novoTema);
+    localStorage.setItem("tema", novoTema);
+    botao.textContent = novoTema === "dark" ? "🌙" : "🌞";
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    const temaSalvo = localStorage.getItem("tema") || "light";
+    document.documentElement.setAttribute("data-theme", temaSalvo);
+    document.getElementById("botao-tema").textContent = temaSalvo === "dark" ? "🌙" : "🌞";
+});
