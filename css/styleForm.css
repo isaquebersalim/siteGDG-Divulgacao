@@ -63,7 +63,7 @@ nav a:hover {
     color: #ffa000;
 }
 
-.tema-btn {
+#toggle-theme {
     background: none;
     border: none;
     font-size: 20px;
@@ -72,8 +72,7 @@ nav a:hover {
     transition: transform 0.3s ease;
 }
 
-
-.tema-btn:hover {
+#toggle-theme:hover {
     transform: scale(1.2);
 }
 

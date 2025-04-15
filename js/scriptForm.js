@@ -29,22 +29,16 @@ document.getElementById("inscricaoForm").addEventListener("submit", function(e) 
     }, 1000);
 });
 
-const telefone = document.getElementById('telefone');
-telefone.addEventListener('input', function(){
-    this.value = this.value.replace(/\D/g, '');//Remove qualquer coisa que não seja número
-});
-function alternarTema() {
-    const html = document.documentElement;
-    const botao = document.getElementById("botao-tema");
-    const temaAtual = html.getAttribute("data-theme");
-    const novoTema = temaAtual === "dark" ? "light" : "dark";
-    html.setAttribute("data-theme", novoTema);
-    localStorage.setItem("tema", novoTema);
-    botao.textContent = novoTema === "dark" ? "🌙" : "🌞";
-}
+const toggleBtn = document.getElementById("toggle-theme");
+const html = document.documentElement;
 
-window.addEventListener("DOMContentLoaded", () => {
-    const temaSalvo = localStorage.getItem("tema") || "light";
-    document.documentElement.setAttribute("data-theme", temaSalvo);
-    document.getElementById("botao-tema").textContent = temaSalvo === "dark" ? "🌙" : "🌞";
+toggleBtn.addEventListener("click", () => {
+    const currentTheme = html.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", newTheme);
+
+    // Ícone muda entre lua ☾ e sol ☀
+    toggleBtn.innerHTML = newTheme === "dark"
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
 });
